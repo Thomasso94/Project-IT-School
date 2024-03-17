@@ -1,0 +1,143 @@
+.sideMenu {
+  width: 20%;
+  height: 100%;
+  padding: 30px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  background: #fbeec1;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.sideMenu .logo {
+  font-family: "Kode" sans-serif;
+  position: relative;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sideMenu .nav {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+}
+
+.sideMenu .nav li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  background: #fbeec1;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.sideMenu .nav li a:hover,
+.sideMenu .nav li a.active {
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.sideMenu .socialMedia {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  transition: 0.5s;
+}
+
+.sideMenu .socialMedia li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+.sideMenu .socialMedia li a:hover {
+  color: var(--second);
+}
+
+.sideMenu.active {
+  width: 7%;
+  transition: 1s;
+  overflow: hidden;
+  align-items: center;
+}
+
+.sideMenu.active .project-title,
+.sideMenu.active .navName {
+  display: none;
+}
+
+.sideMenu.active .nav li a {
+  font-size: 1.8em;
+}
+
+.sideMenu.active .socialMedia {
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .sideMenu {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .sideMenu .project-title,
+  .sideMenu .navName {
+    display: none;
+  }
+
+  .sideMenu .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sideMenu .socialMedia {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sideMenu.active {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1500px) {
+  .sideMenu .project-title {
+    font-size: 1.1rem;
+  }
+
+  .sideMenu .socialMedia {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}

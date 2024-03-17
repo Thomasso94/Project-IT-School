@@ -1,0 +1,149 @@
+.carousel-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  height: 50px;
+  width: 50px;
+  background: var(--black);
+  border-radius: 50%;
+  margin-top: 335px;
+}
+
+.carousel-item h2 {
+  margin: 10px 0;
+  font-family: "Palanquin Dark", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--black);
+  opacity: 1;
+}
+
+.carousel-container .carousel-slider .carousel-item .buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel-container .carousel-slider .carousel-item .buttons a {
+  text-decoration: none;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.carousel-container .carousel-slider .carousel-item .buttons .orderButton {
+  padding: 8px 20px;
+  background: #fbeec1;
+  border-radius: 10px;
+}
+
+.carousel-container .carousel-slider .carousel-item .buttons .playButton {
+  height: 50px;
+  width: 50px;
+  background-color: var(--black);
+  color: #fbeec1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.playButton .play {
+  display: block;
+}
+
+.playButton .pause {
+  display: none;
+}
+
+.playButton.active .play {
+  display: none;
+}
+
+.playButton.active .pause {
+  display: block;
+}
+.video iframe {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 60%;
+  border-radius: 0 30px 0 30px;
+  border: 4px solid transparent;
+  background: var(--second);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  z-index: 1100;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.2s;
+  transform-origin: top right;
+}
+
+.video.active iframe {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .carousel-item {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+  }
+
+  .carousel-item h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin-bottom: 70px;
+  }
+
+  .buttons {
+    width: 100%;
+    font-size: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 15px;
+    height: 15px;
+    margin: 145px 5px;
+  }
+
+  .video.active iframe {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1200px) {
+  .carousel-container {
+    width: 550px;
+    height: 400px;
+    margin-top: 100px;
+  }
+}

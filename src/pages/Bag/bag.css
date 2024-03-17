@@ -1,0 +1,22 @@
+.shopBagTable {
+  margin-top: 50px;
+  color: var(--black);
+  border-radius: 20px;
+  background: #bc986a;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+}
+
+.shopBagTable thead tr {
+  font-size: 1.3rem;
+}
+
+.shopBagTable thead tr th {
+  background: transparent;
+  color: var(--black);
+}

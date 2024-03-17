@@ -1,0 +1,81 @@
+.filters {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin: 20px 0 30px 0;
+  padding: 0;
+}
+
+.filters li {
+  color: var(--black);
+  padding: 10px 25px;
+  transition: 0.3s;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filters li:hover,
+.filters li.active {
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.search {
+  color: var(--black);
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  padding: 8px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.search input {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+}
+
+.search input:focus {
+  color: var(--black);
+}
+
+.search input::placeholder {
+  color: var(--black);
+}
+
+@media screen and (max-width: 600px) {
+  .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0.7rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .search input {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1500px) {
+  .filters li {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+  }
+
+  .search {
+    width: 200px;
+    height: 50px;
+  }
+}

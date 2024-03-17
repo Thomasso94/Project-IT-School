@@ -1,0 +1,14 @@
+.boardGameRating {
+  font-size: 1rem;
+  color: var(--second);
+}
+
+.boardGameRating i {
+  margin-left: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .boardGameRating {
+    font-size: 0.7rem;
+  }
+}
